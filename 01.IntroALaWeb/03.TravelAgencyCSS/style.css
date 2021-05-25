@@ -1,7 +1,14 @@
-html {
+/* Hago que todos mis textos tengan tamaño de 24 pixeles y 
+fuente de Google Pattaya */
+html, body {
     font-size:24px;
+    font-family: 'Pattaya', sans-serif;
 }
 
+/* Uso la fuente Roboto de Google Fonts en todas las P */
+p {
+    font-family: 'Roboto', sans-serif;
+}
 
 h4 {
     color:chartreuse;
@@ -16,4 +23,12 @@ h4 {
 */
 #itinerary h2, #itinerary h3 {
     color: red;
+}
+
+h2 {
+    color:red;
+}
+
+h1, h2, h3, h4, h5, h6 {
+     text-transform: uppercase;
 }
