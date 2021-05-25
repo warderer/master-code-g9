@@ -1,0 +1,19 @@
+html {
+    font-size:24px;
+}
+
+
+h4 {
+    color:chartreuse;
+}
+
+/* Es importante, separar por comas los selectores
+   y colocar cada regla de forma completa */
+
+/* 
+    Si añado la propiedad !important digo que ese elemento
+    tiene más peso (especificidad)
+*/
+#itinerary h2, #itinerary h3 {
+    color: red;
+}
