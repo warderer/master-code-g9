@@ -3,7 +3,45 @@ fuente de Google Pattaya */
 html, body {
     font-size:24px;
     font-family: 'Pattaya', sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
+header {
+    background-color: #185adb;
+}
+
+nav {
+    display: inline-block;
+    width: 75%;
+}
+
+.logo {
+    width: 24%;
+    display:inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+nav ul li {
+    display:inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffc947;
+}
+
+
+
 
 /* Uso la fuente Roboto de Google Fonts en todas las P */
 p {
