@@ -5,20 +5,32 @@ html, body {
     font-family: 'Pattaya', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
 }
+
+body {
+    background: url('https://image.shutterstock.com/shutterstock/photos/417822544/display_1500/stock-vector-travel-pattern-with-linear-icons-seamless-vector-background-travel-concept-417822544.jpg') fixed;
+}
+
+/* Aquí comienza mi Header + Logo + Nav */
 
 header {
     background-color: #185adb;
 }
 
-nav {
-    display: inline-block;
-    width: 75%;
-}
-
 .logo {
     width: 24%;
     display:inline-block;
+    padding: 10px 0px 0px 15px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: inline-block;
+    width: 75%;
+    padding-right: 60px;
+    box-sizing: border-box;
+    vertical-align: bottom;
 }
 
 nav ul {
@@ -40,8 +52,31 @@ nav ul li a:hover {
     color: #ffc947;
 }
 
+/* Aquí termina mi Header + Logo + Nav */
 
+/* Aquí empieza mi Hero */
+#hero {
+    background-image: url('http://viacam.com.mx/imagenes/banner01.jpg');
+    width: 100%;
+    height: 300px;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+}
 
+main {
+    width:1140px;
+    margin:auto;
+    text-align:center;
+    background-color: rgba(255,255,255,0.95);
+    padding:30px;
+    margin-top:60px;
+    border-radius: 10px;
+}
+
+.itinerary_section img {
+    max-width: 844px;
+}
 
 /* Uso la fuente Roboto de Google Fonts en todas las P */
 p {
