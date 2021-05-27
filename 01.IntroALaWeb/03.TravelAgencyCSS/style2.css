@@ -33,6 +33,7 @@
 
 /* Áqui termina mi Float*/
 
+/* Boton de WhatsApp con position Fixed */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -43,4 +44,24 @@
     max-width: 80px;
 }
 
-/* Boton de WhatsApp con position Fixed */
+/* Menú Sticky */
+header {
+    position: sticky;
+    top:0;
+}
+
+/* Oferton con position relative y absolute */
+.destiny-img {
+    position: relative;
+    max-width: 844px;
+    margin:auto;
+}
+
+.oferton {
+    position:absolute;
+    right: 0;
+    top: 0;
+    background-color:red;
+    padding: 20px;
+    color: white;
+}
