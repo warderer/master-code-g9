@@ -1,3 +1,46 @@
 #itinerary h2, #itinerary h3 {
     color:blue;
 }
+/* Sección de Destinos a 2 Lineas con Float*/
+.destiny_section {
+    text-align:left;
+    width: 90%;
+    margin:auto;
+}
+
+.destiny_section h2, a {
+    text-align:center;
+}
+
+.destiny_section article h3 {
+    float: left;
+}
+
+.destiny_section article img {
+    float: right;
+}
+
+.destiny_section article, .destiny_section a {
+    clear: both;
+    display: block;
+    padding: 30px;
+}
+
+.destiny_section article h3 span {
+    font-size:18px;
+    font-style: italic;
+}
+
+/* Áqui termina mi Float*/
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp img {
+    max-width: 80px;
+}
+
+/* Boton de WhatsApp con position Fixed */
