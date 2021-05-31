@@ -1,0 +1,67 @@
+body{
+    margin: 90px;
+    padding: 90px;
+}
+
+/*  parent property 
+  flex-direction
+  flex-wrap
+  flex-flow (flex-direction & flex-wrap)
+  justify-content
+  align-items
+  align-content
+*/
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    border-color: black;
+    border-style: groove;
+    border-radius: 4%;
+    width: 550px;
+    height: 550px;   
+}
+
+
+
+/* child property 
+ order
+ flex-grow
+ flex-shrink
+ flex-basis
+ flex
+ align-self
+*/
+
+.child{
+    
+    color: black;
+    background-color: blue;
+    border-color: blue; 
+    border-style: groove;
+    width: 10%;
+    height: 35px;
+    font-size: 35px;
+}
+
+
+.child2{
+
+    color: white;
+    background-color: blue;
+    border-color: blue;
+    border-style: groove;
+    width: 10%;
+    height: 35px;
+    font-size: 35px;
+}
+
+.child3{
+    color: white;
+    background-color: blue;
+    border-color: blue;
+    border-style: groove;
+    width: 10%;
+    height: 35px;
+    font-size: 35px;
+}
