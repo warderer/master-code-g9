@@ -35,14 +35,15 @@
     list-style-type: none;
  }
 
- nav ul li a{
+ nav ul li a {
     position: relative;
     text-decoration: none;
     font-weight: 500;
     font-size: 20px;
     padding: 0 35px;
     color:#fff;
-    transition: all .5s; 
+    transition: all .5s ease-in-out;
+    border-right: 1px solid #fff;
  }
 
  nav ul li a:hover{
@@ -76,3 +77,136 @@
     width: 50%;
 }
 
+#hero h1 {
+    position: relative;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+#hero p{
+    border: none;
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+#hero button {
+    position: relative;
+    padding: 10px 25px;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 20px;
+    transition: all .5s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#hero button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #4bb3f0;
+    width: 30%;
+    height: 100%;
+    border-radius: 3px;
+    z-index: -1;
+    transition: all .5s ease-in-out;
+}
+
+
+#hero button:hover::before {
+    width: 100%;
+}
+
+#hero button:hover {
+    color: #fff;
+}
+
+
+#hero img {
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    width: 700px;
+}
+
+#sub-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+#sub-content .container-left {
+    position: relative;
+    width: 55%;
+    background: linear-gradient(to left,  #f734ce, #4bb3f0);
+    padding: 20px;
+    height: 200px;
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+#sub-content .container-left p {
+    width: 80%;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+#sub-content .container-left img{
+    position: absolute;
+    top:15px;
+    right: -75px;
+    border: 12px solid #382857;
+}
+
+#sub-content .container-left button {
+    position: relative;
+    background: none;
+    border: none;
+    margin-top: 15px;
+    /* margin-bottom: 15px; */
+    transition: all .5s ease-in-out;
+}
+
+#sub-content .container-left button::after{
+    content: '->';
+    position: absolute;
+    right: -25px;
+    transition: all .5s ease-in-out;
+}
+
+
+#sub-content .container-left button:hover{
+    color: #382857;
+}
+
+#sub-content .container-left button:hover::after{
+    right: -35px;
+}
+
+#sub-content .social-icons img {
+    position: relative;
+    top:0;
+    width: 40%;
+    margin: 0 10px;
+    border-radius: 50%;
+    opacity: .8;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+}
+
+#sub-content .social-icons img:hover{
+    top: -15px;
+} 
