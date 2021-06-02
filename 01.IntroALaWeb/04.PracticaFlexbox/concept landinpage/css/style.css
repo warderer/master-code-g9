@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+ }
+
+ body{
+     padding: 50px;
+     background: #382857;
+ }
+
+ .container{
+     width: 1440px;
+     margin: 0 auto;
+ }
+
+ nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ nav ul {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+  nav ul li {
+    position: relative;
+    list-style-type: none;
+ }
+
+ nav ul li a{
+    position: relative;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0 35px;
+    color:#fff;
+    transition: all .5s; 
+ }
+
+ nav ul li a:hover{
+    color: #4bb3f0;
+    text-decoration: underline;
+ }
+
+ nav .logo{
+     text-decoration: none;
+     font-weight: bolder;
+     font-size: 35px;
+     color: #fff;
+ }
+
+ #hero {
+     width: 100%;
+     min-height: 600px;
+     height: 600px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #hero .hero-text
+{
+    width: 50%;
+    max-width: 50%;
+}
+
+#hero .hero-image {
+    width: 50%;
+}
+
