@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CREACIÓN DE NUESTRO LAYOUT */
+
+/* VISITAR SITIO 
+https://www.sitepoint.com/css-viewport-units-quick-start/
+*/
+
+body {
+    min-height: 100vh; /*view hight*/
+    background: darkcyan;
+}
+
+
+ /* auto
+auto es reemplazado por algún valor apropiado. 
+Por ejemplo, puede usarse para centrar horizontalmente un elemento bloque.
+div { width:90%;  margin:0 auto; } 
+centrará el div horizontalmente. */
+
+
+.contenedor-padre {
+    background-color: yellowgreen;
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    /* max-width: 1400px; */
+    flex: 0 0  300px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+header {
+   background-color: #456; 
+   color: #EEE;
+   flex: 0 0 300px;
+   border: 1px solid #000;
+}
+
+main {
+    background-color: #678;
+    color: #EEE;
+    /*EN VEZ DE USAR min-width:*/
+     flex: 1 0 auto; /*flex-grow flex-shrink flex-basis*/
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.mainblocks {
+    background-color: #FFC;
+    border: 4px solid #222;
+    min-height: 250px;
+    flex: 1 0 50%;
+}
+
+footer{
+    background-color: orange;
+    border: 4px solid #222;
+    min-height: 250px;
+    flex: 1 0 auto;
+}
+
+
+
+
+
+
+
+/* AQUÍ INICIAN LAS MEDIA QUERIES*/
+/* TABLET STYLES*/
+
+@media screen and (max-width: 1000px) {
+    .contenedor-padre {
+        flex-direction: column;
+    }
+}
+
+/*PHONE STYLES */
+
+
+@media screen and (max-width: 700px) {
+    .box5 , .box6 {
+        display: none;
+    }
+}
