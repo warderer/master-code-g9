@@ -1,0 +1,91 @@
+body {
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+header {            /*NO LA AGREGUES AL PRINCIPIO, AGREGALA CUANDO VAYAS EN INFO-TWO*/
+    margin-top:75px /*agregarlo cuando agregues fixed top*/
+}
+
+.header-content-left img {
+    /* width: 100%;  ESTO ES PARA QUE OCUPE EL ANCHO DE LAS COLUMNAS*/   
+    /* EXPLICAR QUE PODEMOS AGREGAR EN EL ESTILO O EN EL CONTENEDOR DIRECTO*/
+    width: 250px;
+    height: 450px;
+}
+
+.header-content-right h1 {
+    font-size: 55px;
+}
+
+.header-content-right p {
+    text-align: justify;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#testimonial {
+    background: #f1f1f1;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#testimonial p {
+    text-align: justify;
+    font-size: 25px;
+}
+
+#testimonial img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#info-one h4{
+    text-align: justify;
+}
+
+
+#info-one h4 p{
+    margin: 0 auto;
+}
+
+#info-two {
+    background: #f1f1f1;
+    padding: 50px 0 50px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#info-two .container  p {
+    text-align: justify;
+}
+
+#info-two   .container h2 p {
+    flex-basis: auto;
+}
+
+
+footer{
+    background: url(../img/Contact\ us-pana.svg ) no-repeat 75%;
+    padding: 30px 30px 30px 50px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    footer {
+        background: url(../img/Contact\ us-pana.svg ) no-repeat 100%;
+        padding: 10px 10px 10px 10px;
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+    footer {
+        padding: 10px 10px 10px 10px;
+    }
+}
