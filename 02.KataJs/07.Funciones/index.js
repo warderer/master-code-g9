@@ -14,11 +14,10 @@
      // TODO ESTO ES MI BLOQUE DE CÓDIGO
     // ALCANCE (SCOPE) LOCAL
     var total = num1 + num2;
-    console.log("LA SUMA ES: " + total) 
-   // return "LA SUMA ES: " + total ;
+    // console.log("LA SUMA ES: " + total) 
+   return "LA SUMA ES: " + total ;
 }
- Suma( 2 , 2 )
-
+  console.log(Suma(2,2))
 
 // SIN PARAMETROS
 // ALCANCE (SCOPE) GLOBAL
