@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.content-body{
+    background-color: #6dc9ff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-calculator{
+    width: 400px;
+    height: 300px;
+    background-color: #aaaaaa;
+    border-radius: 10px;
+    box-shadow:  2px 10px 9px 6px rgba(0,0,0,0.3);
+    padding: 20px 15px;
+    display: grid; /*SE CREAN COLUMNAS*/
+    grid-template-columns: repeat(4, 1fr); /*AQUÍ YA LAS ESTAMOS CREANDO*/
+    grid-template-rows: 80px;
+    grid-gap:20px
+}
+
+.screen{
+    background-color: #414141;
+    border-radius: 10px;
+    color: #57e8ff;
+    padding: 15px;
+    grid-column: 1/5;
+}
+
+.screen input {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: inherit;
+    font-size: 50px;
+    width: 100%;
+}
+
+.btn-cal {
+    background-color: #ffff;
+}
+
+.btn-cal-radius{
+    border-radius: 15px;
+}
+
+.btn-cal input{
+    border: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    outline: none;
+    color: #7e7e7e;
+    font-size: 25px;
+}
+
+.btn-cal .limpiar{
+    background-color: #fffb88;
+}
+
+.btn-cal .igual{
+    background-color: #98f8ab;
+}
+
+.btn-cal :hover{
+    transition-duration: 0.4s;
+    background-color: #ffb497;
+    color: white;
+}
+
+.btn-igual :hover{
+    transition-duration: 0.4s;
+    background-color: #66f789;
+    color: white;
+}
+
+.btn-limpiar :hover{
+    transition-duration: 0.4s;
+    background-color: #fffb59;
+    color: black;
+}

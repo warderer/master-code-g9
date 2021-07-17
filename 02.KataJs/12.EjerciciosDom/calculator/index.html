@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="content-body">
+        <div class="content-calculator">
+
+            <div class="screen">
+            <input 
+            id="screen-result" 
+            type="text" 
+            placeholder="0">
+            </div>
+<!-- 
+
+                            this.nombre=nombre;
+                            this.value=value; -->
+                            
+            <div class="btn-cal btn-cal-radius">
+             <input id="siete" type="button" value="7" onclick="getData(this)">  <!-- THIS ES QUIEN ME INVOCA --> 
+            </div>
+
+            <div class="btn-cal btn-cal-radius">
+                <input id="ocho" type="button" value="8" onclick="getData(this)">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="9" onclick="getData(this)">   
+            </div>
+    
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="+" onclick="getData(this)">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="4" onclick="getData(this)">   
+            </div>
+   
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="5" onclick="getData(this)">   
+            </div>
+   
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="6" onclick="getData(this)">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="-" onclick="getData(this)">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="1" onclick="getData(this)">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="2" onclick="getData(this)">   
+            </div>
+           
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="3" onclick="getData(this)">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="*" onclick="getData(this)">   
+            </div>
+   
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="0" onclick="getData(this)">   
+            </div> 
+
+            <div class="btn-cal btn-cal-radius">
+                <input type="button" value="/" onclick="getData(this)">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius btn-limpiar">
+                <input type="button" value="C" class="limpiar" onclick="clean()">   
+            </div>
+
+            <div class="btn-cal btn-cal-radius btn-igual">
+                <input type="button" value="=" class="igual" onclick="calcular()">   
+            </div>
+
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
