@@ -30,5 +30,3 @@ function dividir(){
      document.getElementById('resultado').innerHTML = x/y;
  }
  
- 
- 
