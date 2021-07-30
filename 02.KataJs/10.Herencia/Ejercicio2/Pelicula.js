@@ -1,5 +1,5 @@
 //HACEMOS IMPORT DE NUESTRA CLASE LARGOMETRAJE
-const {Largometraje} = require('./Largometrajes')
+import { Largometraje } from './Largometrajes.js';
 
 //SUBCLASE 
 class Pelicula extends Largometraje {
@@ -16,4 +16,4 @@ class Pelicula extends Largometraje {
 
 
 //EXPORTAMOS NUESTRA PLANTILLA (CÓDIGO)
-module.exports = {Pelicula}
+export { Pelicula }

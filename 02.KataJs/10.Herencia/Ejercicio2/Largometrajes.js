@@ -18,5 +18,5 @@ class Largometraje {
 
 
 //EXPORTAMOS NUESTRA PLANTILLA (CÓDIGO)
-module.exports = {Largometraje}
+export { Largometraje };
 

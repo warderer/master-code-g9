@@ -1,5 +1,5 @@
 //HACEMOS IMPORT DE NUESTRA CLASE LARGOMETRAJE
-const {Largometraje} = require('./Largometrajes')
+import {Largometraje} from './Largometrajes.js';
 
 //SUBCLASE DOCUMENTAL
 class Documental extends Largometraje{
@@ -11,9 +11,10 @@ class Documental extends Largometraje{
 
     //METODOS (GET)
     getAuthor(){
-        return this.autor
+        return this.autor;
     }
 }
 
 //EXPORTAMOS NUESTRA PLANTILLA (CÓDIGO)
-module.exports = {Documental}
+//Usando la forma definida por ES6
+export { Documental };

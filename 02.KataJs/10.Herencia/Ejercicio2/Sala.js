@@ -27,4 +27,4 @@ class Sala {
 
 
 //EXPORTAMOS NUESTRA PLANTILLA (CÓDIGO)
-module.exports = {Sala}
+export { Sala }

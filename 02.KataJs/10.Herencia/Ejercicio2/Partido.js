@@ -1,5 +1,5 @@
 //HACEMOS IMPORT DE NUESTRA CLASE LARGOMETRAJE
-const {Largometraje} = require('./Largometrajes')
+import {Largometraje} from './Largometrajes.js';
 
 class Partido extends Largometraje {
     constructor(titulo, duracion, equipo){
@@ -8,7 +8,7 @@ class Partido extends Largometraje {
     }
 
 
-    //METODO 
+    //METODO
     getTeam(){
         return this.equipo
     }
@@ -16,4 +16,4 @@ class Partido extends Largometraje {
 }
 
 //EXPORTAMOS NUESTRA PLANTILLA (CÓDIGO)
-module.exports = {Partido}
+export { Partido }

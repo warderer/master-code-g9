@@ -1,8 +1,14 @@
-//IMPORTAMOS NUESTRAS CLASES
-const {Sala} = require('./Sala')
-const {Pelicula} = require('./Pelicula')
-const {Documental} = require('./Documental')
-const {Partido} = require('./Partido')
+//IMPORTAMOS NUESTRAS CLASES GRACIAS A ES6
+import {Sala} from './Sala.js';
+import {Pelicula} from './Pelicula.js';
+import {Documental} from './Documental.js';
+import {Partido} from './Partido.js';
+
+// Forma INCORRECTA de importar en este momento, ya que requiere NodeJS:
+// const {Sala} = require('./Sala')
+// const {Pelicula} = require('./Pelicula')
+// const {Documental} = require('./Documental')
+// const {Partido} = require('./Partido')
 
 
 // CLASE CINE
