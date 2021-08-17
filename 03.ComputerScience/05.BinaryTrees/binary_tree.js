@@ -104,5 +104,6 @@ nodo.add(55);
 nodo.add(57);
 nodo.add(11);
 nodo.add(10);
+nodo.add(20)
 console.log(nodo.contains(20));
 console.log(nodo);
