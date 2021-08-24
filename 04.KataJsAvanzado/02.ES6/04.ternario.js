@@ -10,7 +10,7 @@ if (edad >= 18) {
 } else {
     console.log("Eres Menor de Edad")
 }
-//En una sola linea, hacemos la logica del IF/ELSE
 
+//En una sola linea, hacemos la logica del IF/ELSE
 const mayorDeEdad = (edad >= 18) ? "Es Mayor de Edad" : "Eres Menor de Edad";
 console.log(mayorDeEdad);
