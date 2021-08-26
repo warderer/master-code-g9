@@ -34,3 +34,54 @@ const multiplos = myArray.filter((numero)=>{
     return data; //Siempre debo retornar un valor
 });
 console.log("Los números mult. de 2 con Filter son: ", multiplos);
+// Resultado --> Los números mult. de 2 con Filter son:  [ 2, 4, 6 ]
+
+
+/* FIND */
+// Busca dentro del arreglo y regresa la PRIMER coincidencia
+const numeroEncontrado = myArray.find((numero)=>{
+    return numero === 5;
+});
+console.log("Encontre el número: ",numeroEncontrado);
+
+
+/* Ejemplo Práctico */
+
+const myArrayPersonas = [
+    {
+        name: 'Alfredo',
+        age: 30
+    },
+    {
+        name: 'Gilberto',
+        age: 28
+    },
+    {
+        name: 'Martha',
+        age: 25
+    },
+    {
+        name: 'Tamara',
+        age: 24
+    },
+];
+
+const myArrayFiltered = myArrayPersonas.filter((person)=>{
+    return person.age >= 25;
+});
+console.log('Solo filtro personas >= 25 años', myArrayFiltered);
+
+// Traigo un nuevo arreglo solo con los nombres
+const myArrayMapped = myArrayPersonas.map((person)=> person.name);
+// Como uso una sola linea, puedo omitir las {} y el return de la
+// funcion flecha
+console.log('Map de Nombres: ', myArrayMapped);
+// Map de Nombres:  [ 'Alfredo', 'Gilberto', 'Martha', 'Tamara' ]
+
+// Lo anterior se puede realizar con una sola constante usando CADENAS
+// Para facilidad de lectura, se puede colocar cada "cadena" en una linea diferente
+const myArrayAll = myArrayPersonas
+    .filter((person) => person.age >=25)
+    .map((person) => person.name);
+
+console.log("Filter y Map Encadenados: ", myArrayAll);
