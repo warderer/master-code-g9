@@ -13,6 +13,7 @@ for (let i = 0; i < myArray.length; i++) {
 console.log("El cuadrado de mis numeros es: ", arrayCuadrado);
 // Resultado --> El cuadrado de mis numeros es:  [ 1, 4, 9, 16, 25, 36 ]
 
+
 /* MAP */
 // Lo anterior se puede simplificar con el uso de MAP
 // Puedo procesar un arreglo y me devuelve uno nuevo ya modificado
@@ -22,7 +23,7 @@ const arrayCuadrado2 = myArray.map((numero)=>{
     return numero**2;
 });
 console.log("El cuadrado de mis numeros con MAP es: ", arrayCuadrado2);
-
+// Resultado --> El cuadrado de mis numeros con MAP es:  [ 1, 4, 9, 16, 25, 36 ]
 
 /* FILTER */
 // Filter devuelve un nuevo array con los elementos
@@ -40,12 +41,13 @@ console.log("Los números mult. de 2 con Filter son: ", multiplos);
 /* FIND */
 // Busca dentro del arreglo y regresa la PRIMER coincidencia
 const numeroEncontrado = myArray.find((numero)=>{
+    //debo retornar el resultado de una condición: un booleano - true/false
     return numero === 5;
 });
 console.log("Encontre el número: ",numeroEncontrado);
+// Resultado --> Encontre el número:  5
 
-
-/* Ejemplo Práctico */
+/* Ejemplo Práctico MAP y FILTER */
 
 const myArrayPersonas = [
     {
@@ -66,6 +68,7 @@ const myArrayPersonas = [
     },
 ];
 
+// Quiero obtener un arreglo con las personas con 25 años o más
 const myArrayFiltered = myArrayPersonas.filter((person)=>{
     return person.age >= 25;
 });
@@ -76,7 +79,7 @@ const myArrayMapped = myArrayPersonas.map((person)=> person.name);
 // Como uso una sola linea, puedo omitir las {} y el return de la
 // funcion flecha
 console.log('Map de Nombres: ', myArrayMapped);
-// Map de Nombres:  [ 'Alfredo', 'Gilberto', 'Martha', 'Tamara' ]
+// Resultado --> Map de Nombres:  [ 'Alfredo', 'Gilberto', 'Martha', 'Tamara' ]
 
 // Lo anterior se puede realizar con una sola constante usando CADENAS
 // Para facilidad de lectura, se puede colocar cada "cadena" en una linea diferente
@@ -85,3 +88,4 @@ const myArrayAll = myArrayPersonas
     .map((person) => person.name);
 
 console.log("Filter y Map Encadenados: ", myArrayAll);
+// Resultado --> Filter y Map Encadenados:  [ 'Alfredo', 'Gilberto', 'Martha' ]
