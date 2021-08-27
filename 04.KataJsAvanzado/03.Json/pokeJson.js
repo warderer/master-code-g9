@@ -9880,3 +9880,36 @@ const pokeJSON = `
   }
 `;
 
+// No puedo usar directamente un JSON
+// Necesito convertirlo a un objeto de JavaScript
+// JSON.parse recibe un string en formato JSON y devuelve un objeto de JS
+const myPokemon = JSON.parse(pokeJSON);
+
+// Quiero encontrar los tipos del pokemon pikachu
+console.log(myPokemon.types);
+
+const typePokemon = myPokemon.types.map((objeto)=>objeto.type.name);
+console.log(typePokemon);
+
+
+// Encontrar las estadisticas del Pokemon
+const stats = myPokemon.stats.map((objeto)=>[objeto.stat.name, objeto.base_stat]);
+console.log(stats);
+
+// Filtrar las habilidades con estadisticas ARRIBA de 50
+console.log(stats.filter((stat)=>stat[1]>50));
+
+
+// Ejercicios
+
+/* Obtener mediante postman/insomnia el JSON de un Pokemon a su elección de la Pókeapi y
+guardar en una CONST e imprimir para cada caso una función que devuelva la siguiente info:
+
+1) Obtener el nombre del Pokemon
+2) Obtener el tipo del Pokemon (type)
+3) Obtener un arreglo con los nombres y valores de las estadisticas del Pokemon (stats) y ordenarlas de mayor a menor
+4) Obtener la lista de habilidades del Pokémon
+5) Obtener la lista de nombres de juegos en que aparece el Pokémon
+6) Realizar una función que devuelva el Indice de Masa Corporal del Pokémon
+
+*/
