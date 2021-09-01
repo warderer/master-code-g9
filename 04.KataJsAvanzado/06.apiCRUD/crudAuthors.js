@@ -34,3 +34,74 @@ const getAuthor = (id) => {
     });
 }
 //getAuthor(14330);
+
+
+// CREAR UN AUTHOR
+// Necesito crear un objeto con mi info a crear
+const jsonSend = {
+    name: "Ramiro",
+    last_name: "Villareal",
+    nacionalidad: "MX",
+    biography: "Elite Hacker JS",
+    gender: "M",
+    age: 30,
+    is_alive: true
+};
+
+//function createAuthor (jsonData)
+const createAuthor = (jsonData) => {
+    const objConfig = {
+        url: URI,
+        form: jsonData
+    }
+
+    request.post(objConfig, (error, response, body) => {
+        if (response.statusCode === 201) {
+            const author = JSON.parse(body);
+            console.log(author);
+        } else {
+            console.log(response.statusCode, response.statusMessage);
+            //Ejemplo: 404 Not Found
+        }
+    });
+}
+//createAuthor(jsonSend);
+
+
+// PATCH a un Author
+const updatedData = {
+    name: "Roger",
+    age: 32
+};
+
+const patchAuthor = (id, jsonData) => {
+    const objConfig = {
+        url: URI+id+'/',
+        form: jsonData
+    }
+
+    request.patch(objConfig, (error, response, body) => {
+        if (response.statusCode === 200) {
+            const author = JSON.parse(body);
+            console.log(author);
+        } else {
+            console.log(response.statusCode, response.statusMessage);
+            //Ejemplo: 404 Not Found
+        }
+    });
+}
+//patchAuthor(14463,updatedData);
+
+
+// DELETE A UN AUTHOR
+const deleteAuthor = (id) => {
+    request.delete(URI+id+'/', (error, response, body) => {
+        if (response.statusCode === 204) {
+            console.log("El Author ha sido eliminado éxitosamente");
+        } else {
+            console.log(response.statusCode, response.statusMessage);
+            //Ejemplo: 404 Not Found
+        }
+    });
+}
+deleteAuthor(14463);
