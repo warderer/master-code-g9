@@ -38,15 +38,15 @@ const getAuthor = (id) => {
 
 // CREAR UN AUTHOR
 // Necesito crear un objeto con mi info a crear
-const jsonSend = {
-    name: "Ramiro",
-    last_name: "Villareal",
-    nacionalidad: "MX",
-    biography: "Elite Hacker JS",
-    gender: "M",
-    age: 30,
-    is_alive: true
-};
+// const jsonSend = {
+//     name: "Ramiro",
+//     last_name: "Villareal",
+//     nacionalidad: "MX",
+//     biography: "Elite Hacker JS",
+//     gender: "M",
+//     age: 30,
+//     is_alive: true
+// };
 
 //function createAuthor (jsonData)
 const createAuthor = (jsonData) => {
@@ -104,4 +104,12 @@ const deleteAuthor = (id) => {
         }
     });
 }
-deleteAuthor(14463);
+//deleteAuthor(14463);
+
+module.exports = {
+    listAuthors,
+    getAuthor,
+    createAuthor,
+    patchAuthor,
+    deleteAuthor
+}
