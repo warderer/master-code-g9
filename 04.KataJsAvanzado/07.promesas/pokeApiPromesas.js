@@ -48,18 +48,46 @@ function getPokemonByName(name){
 // EJECUCIÓN DE LA PROMESA, FORMA #1
 // Resolviendo Promesas con .then y .catch
 // Traer los tipos del pokemon
-getPokemonByName('pikachu')
-    .then((pokemonData)=>{
-        const typePokemon = pokemonData.types.map((objeto)=>objeto.type.name);
-        console.log(`El tipo de ${pokemonData.name} es: ${typePokemon}`);
-    })
-    .catch((error)=>{
-        console.log(error);
-    });
+function getPokemonTypeByNameDos (pokemonName) {
+    getPokemonByName(pokemonName)
+        .then((pokemonData)=>{
+            const typePokemon = pokemonData.types.map((objeto)=>objeto.type.name);
+            console.log(`El tipo de ${pokemonData.name} es: ${typePokemon}`);
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+}
+getPokemonTypeByNameDos("pikachu");
+getPokemonTypeByNameDos("charmander");
+getPokemonTypeByNameDos("squirtle");
 
+// EJECUCIÓN DE LA PROMESA, FORMA #2
+// Resolviendo promesas con Async + Await
+// Se implemento en ES7 y se puede usar en Node.js a partir de la v7.10.1
+// Funciona solo dentro de una función, por que esta debe ser async
+// Ejemplo: Encontrar las estadisticas del Pokemon con Async + Await
+async function getPokemonStatsByName(pokemonName){
+    //await sirve para ESPERAR a que se resuelva la promesa
+    const pokemonData = await getPokemonByName(pokemonName);
+    const stats = pokemonData.stats.map((objeto)=>[objeto.stat.name, objeto.base_stat]);
+    console.log(`Las estadisticas de ${pokemonName}`, stats);
+}
+getPokemonStatsByName('pikachu');
 
-
-
-// getPokemonTypeByName("pikachu");
-// getPokemonTypeByName("charmander");
-// getPokemonTypeByName("squirtle");
+// El problema del código anterior, es que no maneja errores.
+// La forma en que se gestionan los errores con Async + await
+// Es usando TRY y CATCH.
+async function getPokemonStatsByNameDos(pokemonName){
+    //await sirve para ESPERAR a que se resuelva la promesa
+    try {
+        const pokemonData = await getPokemonByName(pokemonName);
+        const stats = pokemonData.stats.map((objeto)=>[objeto.stat.name, objeto.base_stat]);
+        console.log(`Las estadisticas de ${pokemonName}`, stats);
+    } catch(err){
+        console.log(err);
+    }
+}
+getPokemonStatsByNameDos('pikachu');
+getPokemonStatsByNameDos('charmander');
+getPokemonStatsByNameDos('squirtle');
