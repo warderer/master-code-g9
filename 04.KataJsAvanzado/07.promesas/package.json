@@ -1,0 +1,15 @@
+{
+  "name": "07.promesas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ejemploPeticion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
