@@ -12,6 +12,7 @@ function init(){ //App Start
             //La data esta en: response.data.results
             console.log("La Data es:", response.data.results);
             const pokedex = new Pokedex(response.data.results);
+            pokedex.createPokedex();
         }).catch( (error) => {
             console.log("Error:",error);
         })

@@ -7,7 +7,7 @@ class Pokedex {
     }
 
     //Método que me ayuda a colocar hasta 3 ceros en un id del pokémon
-    addZerostoId(id){
+    addZerosToId(id){
         if(id < 10) {
             //agrego 2 ceros al ID
             return '00' + id;
