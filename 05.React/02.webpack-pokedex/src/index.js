@@ -1,5 +1,6 @@
 import axios from 'axios';
 import 'bootstrap';
+import './styles/main.scss';
 import Pokedex from './Pokedex';
 
 function init(){ //App Start

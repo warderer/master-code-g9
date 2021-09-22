@@ -30,14 +30,16 @@
 }
 
 .cropped {
-    width: 48px; /* width of container */
-    height: 48px; /* height of container */
+    width: 48px;
+    /* width of container */
+    height: 48px;
+    /* height of container */
     overflow: hidden;
-
-    img{
-        margin: -24px 0px -24px -5px;
+    img {
+        margin: -24px 0px -24px -30px;
     }
 }
+
 
 .pokepicture {
     max-width: 220px;
