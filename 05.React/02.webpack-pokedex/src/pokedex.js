@@ -21,7 +21,7 @@ class Pokedex {
 
     //Construya un Card de Bootstrap con la información de un pokémon
     //Esta parte es meramente visual
-    cardTemplate(pokemon) {
+    cardTemplate(pokemon) { //el objeto pokemon
         const pokeIconBaseUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'; //.png
         const pokePicBaseUrl = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'; //.png
         console.log(pokemon);
@@ -90,10 +90,44 @@ class Pokedex {
                 </div>
             </div>
         </div>`;
-    return html;
+        return html;
     }
 
+//A partir de un Pokemon de mi lista de Pokemones previamente consultada a la API
+//Traiga los datos de un Pokémon especifico para poder llenar los datos de la tarjeta
+    singlePokemonCard(pokemon) { //objeto
+        const URI = pokemon.url;
+        return axios.get(URI)
+            .then((response)=>{
+                const currentPokemon = response.data;
+                return this.cardTemplate(currentPokemon);
+            }).catch((error)=>{
+                console.log("Error:",error);
+                return error;
+            });
+    }
 
+    //Genero la lista de tarjetas de Pokémon
+    //y la va a pintar en pantalla (lo añade al DOM)
+    getPokemonCardList(){
+        let pokedex = document.getElementById('pokedex');
+        pokedex.innerHTML="";
+
+        this._pokemons.forEach(pokemon => {
+            this.singlePokemonCard(pokemon)
+                .then((result)=>{
+                    this._pokedexContent = this._pokedexContent + result;
+                    pokedex.innerHTML = this._pokedexContent;
+                }). catch((error) => {
+                    return('Error:', error);
+                })
+        });
+    };
+
+    //Inicializa mi lógica del Pokédex
+    createPokedex() {
+        this.getPokemonCardList();
+    }
 }
 
 export default Pokedex;
