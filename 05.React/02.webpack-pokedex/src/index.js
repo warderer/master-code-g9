@@ -11,6 +11,7 @@ function init(){ //App Start
             console.log("Status Code:", response.status);
             //La data esta en: response.data.results
             console.log("La Data es:", response.data.results);
+            const pokedex = new Pokedex(response.data.results);
         }).catch( (error) => {
             console.log("Error:",error);
         })
