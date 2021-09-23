@@ -1,0 +1,15 @@
+.counter-main{
+    font-size: 50px;
+    color: #61dafb; 
+}
+
+.counter-buttons button{
+    border: solid 2px #61dafb;
+    background-color: transparent;
+    padding: 10px 15px;
+    font-size: 24px;
+    color: #61dafb;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
