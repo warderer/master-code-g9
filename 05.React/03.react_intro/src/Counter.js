@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import './Counter.css'
 
 //? En react usamos aún camelCase para clases y funciones 
@@ -41,4 +41,5 @@ class Counter extends React.Component {
     }
 }
 
-export default Counter
+
+export default Counter;
