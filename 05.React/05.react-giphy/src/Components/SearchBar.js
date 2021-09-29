@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
 
     render(){
         return(
-           <div className="search-bar">
+           <div className="search-bar" style={{margin: 40}}>
                <input 
                 className="search-input"
                 placeholder="¿Qué deseas buscar?"
@@ -22,12 +22,12 @@ class SearchBar extends React.Component {
             }}
                />
 
-            <button className="search-button"
+            <button 
+            className="search-button"
             onClick={() => this.props.emitSearch(this.state.search)}
             >
-                Buscar
+             Buscar
             </button>
-
         </div> 
         )
     }
