@@ -23,10 +23,12 @@ class SearchBar extends React.Component {
                />
 
             <button className="search-button"
-            onClick={() => this.props.emitSearch(this.state.search)}>
+            onClick={() => this.props.emitSearch(this.state.search)}
+            >
                 Buscar
             </button>
-           </div> 
+
+        </div> 
         )
     }
 }
