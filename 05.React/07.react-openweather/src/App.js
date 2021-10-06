@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import WeatherWidget from './components/WeatherWidget';
 
 function App() {
 // #2 Manejo de los States de la Aplicación
@@ -73,6 +74,7 @@ const submitHandler = () => {
               )}
           </section>
         </div>
+        { apiData.main ? (<WeatherWidget weatherData={apiData}/>) : (<h2>Cargando...</h2>)}
     </div>
   );
 }
