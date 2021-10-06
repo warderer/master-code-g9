@@ -36,6 +36,7 @@ const submitHandler = () => {
     <div className="App">
       <header className="App-header">
         <h1>React Weather App</h1>
+      </header>
         <div className="container">
           <label htmlFor="location-name">
             Enter Location:
@@ -52,8 +53,26 @@ const submitHandler = () => {
           <button onClick={submitHandler}>
             Search
           </button>
+
+          <section className="data">
+            { apiData.main ? (
+              <main>
+                <img
+                  src={`http://openweathermap.org/img/w/${apiData.weather[0].icon}.png`}
+                  alt="weather status icon"
+                  className="weather-icon"
+                />
+                <p>Temp. Actual: <strong>{apiData.main.temp}&deg; C</strong></p>
+                <p>Ubicación: <strong>{apiData.name}</strong></p>
+                <p>Temp. Mínima: <strong>{apiData.main.temp_min}</strong></p>
+                <p>Temp. Máxima: <strong>{apiData.main.temp_max}</strong></p>
+                <p>Condiciones: <strong>{apiData.weather[0].description}</strong></p>
+              </main>
+              ) : (
+                <h2>Cargando...</h2>
+              )}
+          </section>
         </div>
-      </header>
     </div>
   );
 }
