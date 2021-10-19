@@ -1,4 +1,4 @@
-import { Route, Switch, Link, useLocation } from 'react-router-dom';
+import { Route, Switch, Link, useLocation, useParams, useHistory } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -25,9 +25,15 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          {/* Con :nombreVar indico que va a recibir un parametro con ese valor */}
+
+          <Route path="/portafolio/:pid">
+            <PortafolioDetalle />
+          </Route>
           <Route path="/portafolio">
             <Portafolio />
           </Route>
+
           <Route path="/contacto">
             <Contacto />
           </Route>
@@ -66,6 +72,17 @@ function Portafolio() {
   return(
     <>
       <h1>Portafolio</h1>
+      <ul>
+        <li>
+          <Link to="/portafolio/1">Pinterest</Link>
+        </li>
+        <li>
+          <Link to="/portafolio/2">Cajero</Link>
+        </li>
+        <li>
+          <Link to="/portafolio/3">Pokédex</Link>
+        </li>
+      </ul>
     </>
   )
 }
@@ -85,6 +102,37 @@ function Error404(){
     <>
       <h1>Error 404</h1>
       <p>No encontre la ruta: { location.pathname } </p>
+    </>
+  )
+}
+
+function PortafolioDetalle(){
+  const proyectos = [
+    { id: 1, nombre: "Pinterest", desc: "Un clon de pinterest con HTML y CSS" },
+    { id: 2, nombre: "Cajero", desc: "Simulador de cajero autómatico con HTML, CSS y JS" },
+    { id: 3, nombre: "Pokédex", desc: "Consumir la PokéAPI y mostrar un listado de Pokémons con HTML, CSS, y JS "}
+  ]
+
+  let { pid } = useParams();
+
+  const history = useHistory();
+
+  return(
+    <>
+      <h3>ID: { proyectos[pid-1].id }</h3>
+      <h3>Nombre: { proyectos[pid-1].nombre }</h3>
+      <p>Descripción: { proyectos[pid-1].desc }</p>
+
+      <button onClick={()=>{
+        /*<Link to="/portafolio">Portafolio</Link> <- Esto no funciona
+        Cuando quiero usar un enlace dentro de una lógica de JS
+        Necesito usar useHistory
+        */
+        history.push('/portafolio');
+       //history.goback(); me regresa a la URL anterior de donde vine.
+      }}>
+        Nos vamos al Portafolio
+      </button>
     </>
   )
 }
