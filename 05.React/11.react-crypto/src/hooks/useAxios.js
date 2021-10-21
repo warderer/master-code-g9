@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-axios.defaults.baseURL = process.env.REACT_API_URI || 'https://api.coingecko.com/api/v3/coins';
+axios.defaults.baseURL = process.env.REACT_APP_API_URI || 'https://api.coingecko.com/api/v3/';
 
 /*
 Credits: Yogini Bende (2021)
