@@ -25,7 +25,7 @@ function useAxios (axiosParams) {
         try {
             const result = await axios.request(params);
             setResponse(result.data);
-            console.log(result.data);
+            // console.log(result.data);
         } catch (error) {
             setError(error);
         } finally {
