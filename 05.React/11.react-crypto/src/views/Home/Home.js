@@ -9,6 +9,10 @@ const Home = () => {
         url: 'coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false'
     });
 
+    const handleChange = e => {
+        return '';
+    }
+
     useEffect(() =>{
         if (response !== null) {
             setCoins(response);
@@ -17,9 +21,32 @@ const Home = () => {
     },[response]);
 
     return (
-        <div>
+        <>
             <h1>Home</h1>
-        </div>
+            <div className='coin-app'>
+            <div className='coin-search'>
+                <h1 className='coin-text'>Search a currency</h1>
+                <form>
+                    <input
+                        className='coin-input'
+                        type='text'
+                        onChange={handleChange}
+                        placeholder='Search'
+                    />
+                </form>
+            </div>
+            {error && (
+                <div>
+                    <p>{error.message}</p>
+                </div>
+            )}
+
+            {coins && (<div>
+                <p>Algo</p>
+            </div>)
+            }
+            </div>
+        </>
     )
 }
 
