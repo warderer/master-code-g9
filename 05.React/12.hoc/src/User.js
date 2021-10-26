@@ -5,10 +5,10 @@ const User = ({user}) => {
         <div>
             {/* CON ESTE RENDER VAMOS A RENDERIZAR UN USUARIO EN ESPECIFICO */}
         <h2>
-            {user.name}
-            {user.username}
-            {user.address.street}
-            {user.phone}
+            {user.name} <br />
+            {user.username} <br />
+            {user.address.street}<br />
+            {user.phone}<br />
             {user.website}
         </h2>
         <span>
