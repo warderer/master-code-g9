@@ -15,7 +15,8 @@ const WithCurrentUser = ComponentUser => {
 
     }, [])//escuchamos las dependencias para saber si hay cambios
 
-
+    //Por temas de asincronimos a la API usamos un if(!algo)
+    if(!user) return "CARGANDO . . ."
         return <ComponentUser {...props}  user={user}/> //pasamos los props de nuestro usuario
     }
    
