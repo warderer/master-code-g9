@@ -2,13 +2,13 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 
-const WithCurrentUser = ComponentUser => {
-    const NewComponent = props =>{
+const WithUserId = ComponentUser => {
+    const NewComponent = ({ userId, ...props}) =>{
         const [user,setUser] = useState(null);
 
     //con useEffect podemos inicializar variables o hacer llamadas a las APIs
     useEffect(() =>{
-        axios.get("https://jsonplaceholder.typicode.com/users/1")
+        axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`)
         .then(resp=>{
             setUser(resp.data)
         })
@@ -23,4 +23,4 @@ const WithCurrentUser = ComponentUser => {
     return NewComponent
 }
 
-export default WithCurrentUser
+export default WithUserId
