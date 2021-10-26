@@ -1,6 +1,6 @@
 LES DEJO EL CÓDIGO BASE DE 
       WithCurrenteUser que pasa a ser -> WithUserId
-
+esto lo hicimos puesto que estamos consumiendo usarios con su ID
       //EN NUESTRO COMPONENTE WithCurrentUser salamente hacemos la lógica
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
