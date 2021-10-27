@@ -1,0 +1,17 @@
+.home-container {
+    display:flex;
+    justify-content: space-between;
+    height: 100vh;
+    color: #D8D8D8;
+    text-align: center;
+}
+
+.izquierdo {
+    background-color: #333333;
+    width: 50%;
+}
+
+.derecho {
+    background-color: #444444;
+    width: 50%;
+}
