@@ -1,7 +1,7 @@
 .home-container {
     display:flex;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
     color: #D8D8D8;
     text-align: center;
 }
