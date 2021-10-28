@@ -7,7 +7,7 @@ import Item from '../Views/Item';
 
 // DEVUELVE UN JSX PARA QUE SEA UN COMPONENTE DE REACT
     const Logout = () => {
-       window.localStorage.removeItem('') 
+       window.localStorage.removeItem('token') 
        return <Redirect to="/" />
     }
  
