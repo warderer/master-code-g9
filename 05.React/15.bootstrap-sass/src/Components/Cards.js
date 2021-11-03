@@ -9,17 +9,20 @@ const cards =[
     {
         id: 1,
         title: 'Día de Muertos',
-        image: image1
+        image: image1,
+        url: 'https://www.bbc.com/mundo/noticias-54758605'
     },
     {
         id: 2,
         title: 'Johnny Cupcakes',
-        image: image2
+        image: image2,
+        url: 'https://johnnycupcakes.com/'
     },
     {
         id: 3,
         title: 'Checo Pérez',
-        image: image3
+        image: image3,
+        url: 'https://checoperez.com/'
     }
 
 ]
@@ -34,7 +37,7 @@ function Cards() {
                   //Aquí hacemos un recorrido
                   cards.map(card => (        
             <div className="col-md-4" key={card.id} >
-                <Card title={card.title}/>
+                <Card title={card.title} imageSource={card.image} url={card.url}/>
             </div>
                   ))
               }
