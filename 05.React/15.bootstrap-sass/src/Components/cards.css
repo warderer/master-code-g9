@@ -1,0 +1,30 @@
+.card:hover {
+  -webkit-box-shadow: 4px 4px 5px 3px rgba(255, 255, 255, 0.273);
+          box-shadow: 4px 4px 5px 3px rgba(255, 255, 255, 0.273);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.card-body {
+  padding: 2rem 0 !important;
+}
+
+.card-text {
+  padding: 0.3rem 1rem;
+  font-size: 1rem;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.card-img-top {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+}
+/*# sourceMappingURL=cards.css.map */
