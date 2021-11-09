@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import axios from 'axios';
+import Link from 'next/link';
 
 // getServerSideProps() es similar a getStaticProps()
 // La diferencia es que este se ejecuta cada vez que se hace una
@@ -31,6 +32,8 @@ const color = (props) => {
             <p>Year: {props.color.data.year} </p>
             <p>Color: {props.color.data.color} </p>
             <p>Pantone: {props.color.data.pantone_value} </p>
+            <br />
+            <Link href="/colors">REGRESAR</Link>
         </div>
     )
 }
