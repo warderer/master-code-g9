@@ -28,7 +28,7 @@ const colors = (props) => {
                 <title>All the Colors</title>
             </Head>
             <h2>The Colors</h2>
-            {props.colors.data.map( element => <li><Link href={`/colors/${element.id}`}>{element.name}</Link></li> )}
+            {props.colors.data.map( element => <li key={element.id}><Link href={`/colors/${element.id}`}>{element.name}</Link></li> )}
         </div>
     )
 }
