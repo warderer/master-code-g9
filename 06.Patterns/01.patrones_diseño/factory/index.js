@@ -1,0 +1,17 @@
+// FACTORY, VA A ESTAR CREANDO OBJETOS
+// QUE PERMITA A LAS SUBLCASES DECIDIR QUE CLASE INSTANCIAR
+
+const iPhoneXR = require("./iphone-xr");
+const iPhoneXS = require("./iphone-xs");
+
+//INSTANCIAR Y A CREAR NUESTROS OBJETOS
+const myiPhoneXR = new iPhoneXR("000123100");
+const myiPhoneXS = new  iPhoneXS("242831245");
+
+
+myiPhoneXR.displayConfig();
+myiPhoneXS.displayConfig();
+
+// ¿ENTONCES CUANDO UTILIZAMOS UN FACTORY?
+// CUANDO TENEMOS QUE CREAR VARIOS OBJETOS QUE SON DE UN MISMO TIPO
+// DEBEN ESTAR PASANDO LOS PARAMETROS
