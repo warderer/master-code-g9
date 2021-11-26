@@ -1,6 +1,13 @@
 import React from 'react';
 
-export const MainPage = () => <h1>Simpsons quotes</h1>
+// CÓDIGO DE IMPLEMENTACIÓN
+
+export const MainPage = () => (
+     <div aria-level="1"  role="heading">
+        Simpsons quotes
+     </div>
+)
+
 
 
 
