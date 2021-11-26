@@ -1,0 +1,9 @@
+import React from 'react';
+
+export const MainPage = () => <h1>Simpsons quotes</h1>
+
+
+
+//* CAMBIOS MÍNIMOS NECESARIOS
+//* ES PARA QUE EL TEST PASE LA PRUEBA
+//* DEBEMOS MANTENER EL CÓDIGO SIN UNA LÓGICA NECESARIA O ABSTRACCIONES NECESARIAS (YAGNI)
