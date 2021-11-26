@@ -3,9 +3,14 @@ import React from 'react';
 // CÓDIGO DE IMPLEMENTACIÓN
 
 export const MainPage = () => (
-     <div aria-level="1"  role="heading">
-        Simpsons quotes
-     </div>
+     <>
+    <h1>Simpsons quotes</h1>
+        <ul>
+            <li>Test</li>
+            <li>Test</li>
+            <li>Test</li>
+        </ul>
+     </>
 )
 
 
