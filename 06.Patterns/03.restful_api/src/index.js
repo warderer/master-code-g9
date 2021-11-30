@@ -9,19 +9,17 @@ const app = express() // app, es la parte principal de mi aplicación
 const morgan = require ('morgan');
 
 //? settings 
-app.set('port', process.env.PORT || 3000) // establecemos el número de puerto, y gracias a esto
-                                         //podemos usar el puerto en cualquier parte de la pp
-
-//?  GET POST PUT DELETE
-app.get('/', function(req,res) {
-    res.send('HOLA MUNDO DESDE EXPRESS')
-})
+app.set('port', process.env.PORT || 3000) // establecemos el número de puerto, y gracias a esto podemos usar el puerto en cualquier parte de la app
+app.set('json spaces', 2)                                         
 
 //? MIDDLEWARE
-app.use(morgan)
+app.use(morgan('dev'))
 app.use(express.json()) //este metodo le permite a mi servidor recibir formatos JSON y poder enterlos
 app.use(express.urlencoded({extended: false}))
 
+//? routes
+app.use(require ('./routes/routes.js'))
+app.use('/api/movies' ,require ('../src/routes/movies.js'))
 
 //? starting the server
 app.listen(app.get('port'),() => {
