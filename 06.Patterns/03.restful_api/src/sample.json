@@ -1,0 +1,16 @@
+[
+    {
+        "id": "1",
+        "title": "spiderman no way home",
+        "director": "Jon Watts",
+        "year": "2021",
+        "rating": "9.5"
+    },
+    {
+        "id": "2",
+        "title": "venom 2",
+        "director": "Andy Serkis",
+        "year": "2021",
+        "rating": "8.5"
+    }
+]
