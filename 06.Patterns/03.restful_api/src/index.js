@@ -23,5 +23,5 @@ app.use('/api/movies' ,require ('../src/routes/movies.js'))
 
 //? starting the server
 app.listen(app.get('port'),() => {
-    console.log(`SERVIDOR CORRIENDO EN: http://localhost:${app.get('port')}`.bgRed)
+    console.log(`SERVIDOR CORRIENDO EN: `.bgBlue +  ` http://localhost:${app.get('port')}`.bgMagenta)
 })
