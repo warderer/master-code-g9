@@ -1,5 +1,6 @@
 const {Router} = require ('express');
 const router = Router() //ejecutamos router
+const _ = require('underscore')
 
 // el usuario vera todas las pelis que tengamos
 
@@ -24,9 +25,22 @@ router.post('/', (req,res) => {
     }else{
        res.status(500).json({error: 'THERE WAS AN ERROR'}) 
     }
-    // console.log(req.body)
-    res.send('recived')
-    // res.send('movies')
+    // res.send('recived')
+    res.send('movies')
 })
+
+    // :id -> le pasamos un parametro
+router.delete('/:id' , (req,res) => {
+    const {id} = req.params
+   // each recorre el arreglo, que recibe una película y un indice (movie,i)
+    _.each(movies, (movie, i) =>{
+        if(movie.id == id){
+            //desde mi arreglo de movies, recorremos con su método splice 
+            movies.splice(i,1)
+        }
+    })
+    res.send('deleted')
+})
+
 
 module.exports = router
