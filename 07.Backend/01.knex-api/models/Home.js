@@ -25,7 +25,15 @@ const findAll = () => {
         .from('homes')
 };
 
+const findOne = (houseId) => {
+    return knex
+        .select('*')
+        .from('homes')
+        .where({ house_id: houseId });
+};
+
 module.exports = {
     create,
-    findAll
+    findAll,
+    findOne
 };
