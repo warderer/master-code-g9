@@ -12,6 +12,17 @@ const createHome = (req, res) => {
     })
 };
 
+const findAllHomes = (req, res) => {
+    ModelHome.findAll()
+    .then( (row) => {
+        res.status(200).send(row);
+    })
+    .catch((err) => {
+        res.status(400).send(err.message);
+    })
+}
+
 module.exports = {
     createHome,
+    findAllHomes
 }

@@ -18,6 +18,14 @@ const create = (bodyHome) => {
         .returning(['house_id', 'title', 'description', 'guests', 'address', 'active', 'created_at'])
 };
 
+//Obtener todos los registros de la tabla HOMES
+const findAll = () => {
+    return knex
+        .select('*')
+        .from('homes')
+};
+
 module.exports = {
-    create
+    create,
+    findAll
 };
