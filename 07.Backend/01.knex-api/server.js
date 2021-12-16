@@ -1,4 +1,5 @@
 const express = require('express');
+const homeRoutes = require('./routes/homeRoutes');
 
 const app = express();
 
@@ -7,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 /* Aquí debo poner mis rutas*/
-
+app.use('/api/v1', homeRoutes);
 /* Aquí terminan mis rutas */
 
 // Aquí inicio el servidor, para que escuche peticiones en el puerto 3000.
