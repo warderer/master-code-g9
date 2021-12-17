@@ -6,6 +6,7 @@ const homeController = require('../controllers/homeController');
 router.post('/homes', (homeController.createHome));
 router.get('/homes', (homeController.findAllHomes));
 router.get('/homes/:idHome',(homeController.findOneHome));
+router.patch('/homes/:idHome',(homeController.updateOneHome));
 
 
 module.exports = router;
