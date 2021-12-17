@@ -23,6 +23,7 @@ const findAll = () => {
     return knex
         .select('*')
         .from('homes')
+        .where({ active: true })
 };
 
 const findOne = (houseId) => {
@@ -40,9 +41,28 @@ const update = (houseId, bodyToUpdate) => {
         .returning('*')
 }
 
+// Este si lo BORRA de la base de datos
+const destroy = (houseId) => {
+    return knex
+        .del()
+        .from('homes')
+        .where({ house_id: houseId })
+}
+
+// Este no lo borra de la base de datos
+const softDelete = (houseId) => {
+    return knex
+        .update({ active: false })
+        .from('homes')
+        .where({ house_id: houseId })
+}
+
+
 module.exports = {
     create,
     findAll,
     findOne,
-    update
+    update,
+    destroy,
+    softDelete
 };
